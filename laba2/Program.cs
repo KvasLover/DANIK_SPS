@@ -62,6 +62,18 @@ namespace laba2
             Console.WriteLine($"short -\t{l}");
             Console.WriteLine($"ushort -\t{m}");
 
+            //b)
+
+            byte a1 = 1, b1 = 2;
+            double c1 = a1;
+            float d1 = b1;
+            long e1 = a1;
+            short f1 = b1;
+            int g1 = a1;
+
+            Console.WriteLine($"c1 = {c1}, d1 = {d1}, e1 = {e1}, f1 = {f1}, g1 = {g1}");
+
+
         }
     }
 }
