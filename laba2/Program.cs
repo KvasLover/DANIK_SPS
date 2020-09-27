@@ -73,6 +73,12 @@ namespace laba2
 
             Console.WriteLine($"c1 = {c1}, d1 = {d1}, e1 = {e1}, f1 = {f1}, g1 = {g1}");
 
+            //c)
+
+            int a3 = 10;
+            object b3 = a3;
+
+            int c3 = (int)b3;
 
         }
     }
