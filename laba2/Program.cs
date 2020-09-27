@@ -316,13 +316,13 @@ namespace laba2
             var firstWeird = (1, 4);
             var secondWeird = (1, 4);
             int a16 = firstWeird.CompareTo(secondWeird);
-            Console.WriteLine($"Сравнение двух кортежей (0 - равны, -1 - не равны): {a16}\n");*/
+            Console.WriteLine($"Сравнение двух кортежей (0 - равны, -1 - не равны): {a16}\n");
 
 //5) ФУНКЦИИ
     
             //a) СОЗДАТЬ И ВЫЗВАТЬ ЛОКАЛЬНУЮ ФУЕКЦИЮ
 
-            Console.WriteLine("a)\n");
+            Console.WriteLine("5)\n");
 
             Console.WriteLine("Введите размер массива: ");
             int length16 = Convert.ToInt32(Console.ReadLine()), counter16 = 1;
@@ -355,9 +355,32 @@ namespace laba2
 
             Console.WriteLine($"Максимальный элемент массива: {Weird16.Item1}\nМинимальный элемент массива: {Weird16.Item2}\nПервый символ строки: {Weird16.Item3}");
 
-            Console.WriteLine();
+            Console.WriteLine();*/
 
+            //6) checked/unchecked
 
+            Console.WriteLine("6)\n");
+
+            static void Func1()
+            {
+                checked
+                {
+                    int a17 = 2147483647;
+                    Console.WriteLine($"Значение переменной в блоке checked: {a17}");
+                }
+            }
+
+            static void Func2()
+            {
+                unchecked
+                {
+                    int b17 = 2147483647;
+                    Console.WriteLine($"Значение переменной в блоке unchecked: {b17}");
+                }
+            }
+
+            Func1();
+            Func2();
 
         }
     }
