@@ -148,7 +148,15 @@ namespace laba2
             string a9 = "", b9 = null, c9 = "string";
             Console.WriteLine($"{String.IsNullOrEmpty(a9)}\n{String.IsNullOrEmpty(b9)}\n{String.IsNullOrEmpty(c9)}\nLength of '' string: {a9.Length}\n'null' string: {b9}");
 
+            //d)
 
+            StringBuilder a10 = new StringBuilder("Hey, I am a string!", 50);
+            Console.WriteLine($"String created with StringBuilder: {a10}");
+            a10.Remove(0, 5);
+            Console.WriteLine($"Without some elements: {a10}");
+            a10.Insert(0, "Hello, ");
+            Console.WriteLine($"With some elements in the tail: {a10}");
+            Console.WriteLine($"With some elements in the head: {a10 + " Don't delete me!"}");
         }
     }
 }
