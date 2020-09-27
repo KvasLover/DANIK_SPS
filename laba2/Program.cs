@@ -127,11 +127,11 @@ namespace laba2
 
             Console.Write("Enter a string of some words: "); //РАЗДЕЛЕНИЕ НА СЛОВА          
             string d8 = Console.ReadLine();
-            for (int i2 = 0; i2 < d8.Length; i++)
+            for (int i2 = 0; i2 < d8.Length; i2++)
             {
                 if (d8[i2] == ' ')
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine();
                     continue;
                 }
                 Console.Write($"{d8[i2]}");
@@ -176,6 +176,31 @@ namespace laba2
                 }
                 Console.WriteLine();
             }
+            
+            //b)
+
+            string[] Array2 = {"string1","string2","string3","string4"};            
+            for (int i12 =0; i12 < 4; i12++)
+            {   
+                Console.Write($"{Array2[i]} ");
+            }
+            Console.WriteLine();
+            Console.WriteLine($"Длина массива строк: {Array2.Length}");
+            Console.Write($"Элемент под каким номером удалить? ");
+            int a12 = Convert.ToInt32(Console.ReadLine()) - 1;
+            Console.WriteLine($"Новое значение элемента под номером {a12+1}: ");
+            string b12 = Console.ReadLine();
+            Array2[a12] = b12;
+            Console.WriteLine($"Отредактированный массив: ");
+            for (int i1 = 0; i1 < 4; i1++)
+            {
+                Console.Write($"{Array2[i1]} ");
+            }
+            Console.WriteLine();
+
+
+
+
         }
     }
 }
