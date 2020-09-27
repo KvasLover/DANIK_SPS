@@ -126,14 +126,14 @@ namespace laba2
 
             Console.Write("Enter a string of some words: "); //РАЗДЕЛЕНИЕ НА СЛОВА          
             string d8 = Console.ReadLine();
-            for (int i = 0; i < d8.Length; i++)
+            for (int i2 = 0; i2 < d8.Length; i++)
             {
-                if (d8[i] == ' ')
+                if (d8[i2] == ' ')
                 {
                     Console.WriteLine("");
                     continue;
                 }
-                Console.Write($"{d8[i]}");
+                Console.Write($"{d8[i2]}");
             }
             Console.WriteLine("");
 
