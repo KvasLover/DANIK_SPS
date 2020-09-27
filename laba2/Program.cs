@@ -142,6 +142,13 @@ namespace laba2
 
             g8 = g8.Remove(0, h8.Length); //УДАЛЕНИЕ ПОДСТРОКИ
             Console.WriteLine($"Fixed string after removing a substring: {g8}");
+
+            //с)
+
+            string a9 = "", b9 = null, c9 = "string";
+            Console.WriteLine($"{String.IsNullOrEmpty(a9)}\n{String.IsNullOrEmpty(b9)}\n{String.IsNullOrEmpty(c9)}\nLength of '' string: {a9.Length}\n'null' string: {b9}");
+
+
         }
     }
 }
