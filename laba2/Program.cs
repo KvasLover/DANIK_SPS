@@ -85,6 +85,12 @@ namespace laba2
             var a4 = 10;
             var b4 = "text";
 
+            //e)
+
+            int? a5 = null;
+            Console.WriteLine($"Nullable vadiable a = {a5}");
+
+
         }
     }
 }
