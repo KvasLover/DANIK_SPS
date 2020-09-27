@@ -104,6 +104,44 @@ namespace laba2
             int c7 = String.Compare(a7, b7);
             Console.WriteLine($"Compare result (0 - same, -1 - not): {c7}");
 
+            //b)
+
+            string a8, b8, c8; //СЦЕПЛЕНИЕ
+            Console.WriteLine($"Enter a8: ");
+            a8 = Console.ReadLine();
+            Console.WriteLine($"Enter b8: ");
+            b8 = Console.ReadLine();
+            Console.WriteLine($"Enter c8: ");
+            c8 = Console.ReadLine();
+            Console.WriteLine($"a8 + b8 + c8 = {a8 + b8 + c8}");
+
+            Console.Write("Enter a string: "); //КОПИРОВАНИЕ
+            string e8 = Console.ReadLine();
+            string f8 = String.Copy(e8);
+            Console.WriteLine($"Copied string: {f8}");
+
+            string g8 = "one two three"; //ВЫДЕЛЕНИЕ ПОДСТРОКИ
+            string h8 = g8.Substring(5, 4);
+            Console.WriteLine($"String: {g8}\nCopied substring: {h8}");
+
+            Console.Write("Enter a string of some words: "); //РАЗДЕЛЕНИЕ НА СЛОВА          
+            string d8 = Console.ReadLine();
+            for (int i = 0; i < d8.Length; i++)
+            {
+                if (d8[i] == ' ')
+                {
+                    Console.WriteLine("");
+                    continue;
+                }
+                Console.Write($"{d8[i]}");
+            }
+            Console.WriteLine("");
+
+            g8 = g8.Insert(0, h8); //ВСТАВКА ПОДСТРОКИ В СТРОКУ
+            Console.WriteLine($"String with added substring: {g8}");
+
+            g8 = g8.Remove(0, h8.Length); //УДАЛЕНИЕ ПОДСТРОКИ
+            Console.WriteLine($"Fixed string after removing a substring: {g8}");
         }
     }
 }
