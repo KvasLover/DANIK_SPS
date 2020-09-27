@@ -280,6 +280,8 @@ namespace laba2
 
                //d) "НЕЯВНО ТИПИЗИРОВАННЫЕ ПЕРЕМЕННЫЕ ДЛЯ ХРАНЕНИЯ МАССИВА И СТРОКИ"
 
+               Console.WriteLine("d)\n");
+
                var a14 = new[] { "string1", "string2", "string3" };
                var b14 = "string4";
 
@@ -295,20 +297,68 @@ namespace laba2
 
             //b) ВЫВОД РАЗНЫМИ СПОСОБАМИ
 
+            Console.WriteLine("b)\n");
+
             Console.WriteLine($"Все элементы кортежа: {Weird.Item1}, {Weird.Item2}, {Weird.Item3}, {Weird.Item4}, {Weird.Item5}");
             Console.WriteLine($"2-й и 3-й элементы кортежа: { Weird.Item2}, { Weird.Item3}\n");
 
             //c) РАСПАКОВКА РАЗНЫМИ СПОСОБАМИ
 
+            Console.WriteLine("c)\n");
+
             var a15 = Weird.Item1;
-            Console.WriteLine($"Распакованный первый элемент: {a15}\n");*/
+            Console.WriteLine($"Распакованный первый элемент: {a15}\n");
 
             //d) СРАВНЕНИЕ КОРТЕЖЕЙ
+
+            Console.WriteLine("d)\n");
 
             var firstWeird = (1, 4);
             var secondWeird = (1, 4);
             int a16 = firstWeird.CompareTo(secondWeird);
-            Console.WriteLine($"Сравнение двух кортежей (0 - равны, -1 - не равны): {a16}\n");
+            Console.WriteLine($"Сравнение двух кортежей (0 - равны, -1 - не равны): {a16}\n");*/
+
+//5) ФУНКЦИИ
+    
+            //a) СОЗДАТЬ И ВЫЗВАТЬ ЛОКАЛЬНУЮ ФУЕКЦИЮ
+
+            Console.WriteLine("a)\n");
+
+            Console.WriteLine("Введите размер массива: ");
+            int length16 = Convert.ToInt32(Console.ReadLine()), counter16 = 1;
+            int[] Array5 = new int[length16];
+            for (int i1 = 0; i1 < length16; i1++)
+            {
+                Console.WriteLine($"Элемент {counter16}: ");
+                Array5[i1] = Convert.ToInt32(Console.ReadLine());
+            }
+            Console.WriteLine("Введите строку: ");
+            string a16 = Console.ReadLine();
+
+            var Weird16 = Func(Array5, a16, length16);
+
+            static (int,int,char) Func(int[] A, string s16, int length16)
+            {
+                int min = A[0], max = min, sum = 0;
+                for (int i16 = 0; i16 < length16; i16++)
+                {
+                    if (A[i16] > max)
+                        max = A[i16];
+                    if (A[i16] < min)
+                        min = A[i16];
+                    sum += A[i16];
+                }
+                char a16 = s16[0];
+                var temp = (max,min,a16);
+                return temp;
+            }
+
+            Console.WriteLine($"Максимальный элемент массива: {Weird16.Item1}\nМинимальный элемент массива: {Weird16.Item2}\nПервый символ строки: {Weird16.Item3}");
+
+            Console.WriteLine();
+
+
+
         }
     }
 }
