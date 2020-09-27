@@ -232,6 +232,10 @@ namespace laba2
                 j13 = 0;
             }
 
+            //d)
+
+            var a14 = new[] { "string1", "string2", "string3" };
+            var b14 = "string4";
 
 
         }
