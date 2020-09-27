@@ -80,6 +80,11 @@ namespace laba2
 
             int c3 = (int)b3;
 
+            //d)
+
+            var a4 = 10;
+            var b4 = "text";
+
         }
     }
 }
