@@ -159,9 +159,9 @@ namespace laba2
             Console.WriteLine($"With some elements in the tail: {a10}");
             Console.WriteLine($"With some elements in the head: {a10 + " Don't delete me!"}");
 
-//3)
+//3) МАССИВЫ
 
-            //a)
+            //a) СОЗДАТЬ, ВЫВЕСТИ
 
             int[,] Array =
             {
@@ -198,6 +198,39 @@ namespace laba2
             }
             Console.WriteLine();
 
+            //c)
+
+            float[][] Array3 = new float[3][];
+            Array3[0] = new float[2];
+            Array3[1] = new float[3];
+            Array3[2] = new float[4];
+            Console.WriteLine($"Введите элементы ступенчатого массива: ");
+            int a13 = 1, j13=0;
+            for(int i13=0;i13<3;i13++)
+            {
+                Console.WriteLine($"Строка {a13}: ");
+                foreach(int element in Array3[i13])
+                {
+                    Array3[i13][j13] = Convert.ToInt32(Console.ReadLine());
+                    j13++;               
+                }
+                a13++;
+                j13 = 0;
+            }
+            j13 = 0;
+            Console.WriteLine($"Ступенчатый массив: ");
+            for (int i13 = 0; i13 < 3; i13++)
+            {
+                
+                foreach (int element in Array3[i13])
+                {
+                    Console.Write($"{Array3[i13][j13]} "); 
+                    j13++;
+                }
+                Console.WriteLine();
+                a13++;
+                j13 = 0;
+            }
 
 
 
