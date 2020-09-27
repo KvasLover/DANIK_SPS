@@ -290,7 +290,7 @@ namespace laba2
                //a) ЗАДАТЬ ИЗ ЭЛ-В ОПР-Х ТИПОВ
 
                Console.WriteLine("a)\n");
-            */
+            
                var Weird = (10, "String1", 'a', "String2", 5e15);
 
             //b) ВЫВОД РАЗНЫМИ СПОСОБАМИ
@@ -301,7 +301,14 @@ namespace laba2
             //c) РАСПАКОВКА РАЗНЫМИ СПОСОБАМИ
 
             var a15 = Weird.Item1;
-            Console.WriteLine($"Распакованный первый элемент: {a15}\n");
+            Console.WriteLine($"Распакованный первый элемент: {a15}\n");*/
+
+            //d) СРАВНЕНИЕ КОРТЕЖЕЙ
+
+            var firstWeird = (1, 4);
+            var secondWeird = (1, 4);
+            int a16 = firstWeird.CompareTo(secondWeird);
+            Console.WriteLine($"Сравнение двух кортежей (0 - равны, -1 - не равны): {a16}\n");
         }
     }
 }
