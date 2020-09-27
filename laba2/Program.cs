@@ -90,6 +90,11 @@ namespace laba2
             int? a5 = null;
             Console.WriteLine($"Nullable vadiable a = {a5}");
 
+            //f)
+
+            var a6 = 10;
+            a6 = 'a';
+            Console.WriteLine($"a6 = {a6}");
 
         }
     }
