@@ -8,11 +8,13 @@ namespace laba2
     {
         static void Main(string[] args)
         {
-//1)
+            //1) ТИПЫ
 
-            //a)
+            //a) ОПРЕДЕЛИТЬ, ВВЕСТИ, ВЫВЕСТИ
 
-            
+            Console.WriteLine("1)\n");
+            Console.WriteLine("a)\n");
+
             bool a = false;
 
             Console.Write("bool ('t'=true, 'f'=false): ");
@@ -63,7 +65,11 @@ namespace laba2
             Console.WriteLine($"short -\t{l}");
             Console.WriteLine($"ushort -\t{m}");
 
-            //b)
+            Console.WriteLine();
+
+            //b) 5 ЯВНЫХ И 5 НЕЯВНЫХ ПРЕОБРАЗОВАНИЙ
+
+            Console.WriteLine("b)\n");
 
             byte a1 = 1, b1 = 2;
             double c1 = a1;
@@ -74,38 +80,56 @@ namespace laba2
 
             Console.WriteLine($"c1 = {c1}, d1 = {d1}, e1 = {e1}, f1 = {f1}, g1 = {g1}");
 
-            //c)
+            Console.WriteLine();
+
+            //c) УПАКОВКА И РАСПАКОВКА
 
             int a3 = 10;
             object b3 = a3;
 
             int c3 = (int)b3;
 
-            //d)
+            //d) НЕЯВНО ТИПИЗИРОВАННАЯ ПЕРЕМЕННАЯ
 
             var a4 = 10;
             var b4 = "text";
 
-            //e)
+            //e) Nullable
+
+            Console.WriteLine("e)\n");
 
             int? a5 = null;
             Console.WriteLine($"Nullable vadiable a = {a5}");
 
-            //f)
+            Console.WriteLine();
+
+
+            //f) МАНИПУЛЯЦИИ С var
+
+            Console.WriteLine("f)\n");
 
             var a6 = 10;
             a6 = 'a';
             Console.WriteLine($"a6 = {a6}");
 
-//2)
+            Console.WriteLine();
 
-            //a)
+//2) СТРОКИ
+
+            Console.WriteLine("2)\n");
+            Console.WriteLine("a)\n");
+
+            //a) ОБЪЯВИТЬ, СРАВНИТЬ
 
             string a7 = "string", b7 = "string";
             int c7 = String.Compare(a7, b7);
             Console.WriteLine($"Compare result (0 - same, -1 - not): {c7}");
 
-            //b)
+            Console.WriteLine();
+
+            //b) СЦЕПЛЕНИЕ, КОПИРОВАНИЕ, ВЫДЕЛЕНИЕ ПОДСТРОКИ, РАЗДЕЛЕНИЕ НА СЛОВА, ВСТАВКА ПОДСТРОКИ, УДАЛЕНИЕ ПОДСТРОКИ
+
+            Console.WriteLine("b)\n");
 
             string a8, b8, c8; //СЦЕПЛЕНИЕ
             Console.WriteLine($"Enter a8: ");
@@ -144,12 +168,20 @@ namespace laba2
             g8 = g8.Remove(0, h8.Length); //УДАЛЕНИЕ ПОДСТРОКИ
             Console.WriteLine($"Fixed string after removing a substring: {g8}");
 
-            //с)
+            Console.WriteLine();
+
+            //с) empty и null
+
+            Console.WriteLine("c)\n");
 
             string a9 = "", b9 = null, c9 = "string";
             Console.WriteLine($"{String.IsNullOrEmpty(a9)}\n{String.IsNullOrEmpty(b9)}\n{String.IsNullOrEmpty(c9)}\nLength of '' string: {a9.Length}\n'null' string: {b9}");
 
-            //d)
+            Console.WriteLine();
+
+            //d) StringBuidler, УДАЛЕНИЕ ПОЗИЦИЙ, ДОБАВЛЕНИЕ В НАЧАЛО И В КОНЕЦ
+
+            Console.WriteLine("d)\n");
 
             StringBuilder a10 = new StringBuilder("Hey, I am a string!", 50);
             Console.WriteLine($"String created with StringBuilder: {a10}");
@@ -158,8 +190,13 @@ namespace laba2
             a10.Insert(0, "Hello, ");
             Console.WriteLine($"With some elements in the tail: {a10}");
             Console.WriteLine($"With some elements in the head: {a10 + " Don't delete me!"}");
+            
+            Console.WriteLine();
 
 //3) МАССИВЫ
+
+            Console.WriteLine("3)\n");
+            Console.WriteLine("a)\n");
 
             //a) СОЗДАТЬ, ВЫВЕСТИ
 
@@ -176,8 +213,12 @@ namespace laba2
                 }
                 Console.WriteLine();
             }
-            
-            //b)
+
+            Console.WriteLine();
+
+            //b) МАССИВ СТРОК, ВЫВЕСТИ СОДЕРЖИМОЕ, ДЛИНУ, ПОМЕНЯТЬ ЭЛ_Т
+
+            Console.WriteLine("b)\n");
 
             string[] Array2 = {"string1","string2","string3","string4"};            
             for (int i12 =0; i12 < 4; i12++)
@@ -196,9 +237,12 @@ namespace laba2
             {
                 Console.Write($"{Array2[i1]} ");
             }
+
             Console.WriteLine();
 
-            //c)
+            //c) СТУПЕНЧАТЫЙ
+
+            Console.WriteLine("c)\n");
 
             float[][] Array3 = new float[3][];
             Array3[0] = new float[2];
@@ -232,11 +276,22 @@ namespace laba2
                 j13 = 0;
             }
 
-            //d)
+            Console.WriteLine();
+
+            //d) "НЕЯВНО ТИПИЗИРОВАННЫЕ ПЕРЕМЕННЫЕ ДЛЯ ХРАНЕНИЯ МАССИВА И СТРОКИ"
 
             var a14 = new[] { "string1", "string2", "string3" };
             var b14 = "string4";
+            
+//4 КОРТЕЖИ
 
+            Console.WriteLine("4)\n");
+
+            //a)) ЗАДАТЬ ИЗ ЭЛ-В ОПР-Х ТИПОВ
+
+            Console.WriteLine("a)\n");
+          
+            var Weird = (10, "String", 'a', "String2", 5e15);
 
         }
     }
