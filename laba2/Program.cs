@@ -96,6 +96,14 @@ namespace laba2
             a6 = 'a';
             Console.WriteLine($"a6 = {a6}");
 
+            //2)
+
+            //a)
+
+            string a7 = "string", b7 = "string";
+            int c7 = String.Compare(a7, b7);
+            Console.WriteLine($"Compare result (0 - same, -1 - not): {c7}");
+
         }
     }
 }
