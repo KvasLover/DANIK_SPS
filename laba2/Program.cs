@@ -292,13 +292,16 @@ namespace laba2
                Console.WriteLine("a)\n");
             */
                var Weird = (10, "String1", 'a', "String2", 5e15);
-            
-            //b) ВЫВОД РАЗЛИЧНЫМИ СПОСОБАМИ
+
+            //b) ВЫВОД РАЗНЫМИ СПОСОБАМИ
 
             Console.WriteLine($"Все элементы кортежа: {Weird.Item1}, {Weird.Item2}, {Weird.Item3}, {Weird.Item4}, {Weird.Item5}");
             Console.WriteLine($"2-й и 3-й элементы кортежа: { Weird.Item2}, { Weird.Item3}\n");
 
+            //c) РАСПАКОВКА РАЗНЫМИ СПОСОБАМИ
 
+            var a15 = Weird.Item1;
+            Console.WriteLine($"Распакованный первый элемент: {a15}\n");
         }
     }
 }
