@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.Serialization.Formatters;
 using System.Text;
 
 namespace laba2
@@ -8,155 +9,173 @@ namespace laba2
         static void Main(string[] args)
         {
             //1)
+            /*
+                        //a)
 
-            //a)
 
-            
-            bool a = false;
+                        bool a = false;
 
-            Console.Write("bool ('t'=true, 'f'=false): ");
-            char temp = Convert.ToChar(Console.ReadLine());
-            if (temp == 't')
-                a = true;
-            else if (temp == 'f')
-                a = false;
-            else
-                Console.WriteLine("Invalid value!");
+                        Console.Write("bool ('t'=true, 'f'=false): ");
+                        char temp = Convert.ToChar(Console.ReadLine());
+                        if (temp == 't')
+                            a = true;
+                        else if (temp == 'f')
+                            a = false;
+                        else
+                            Console.WriteLine("Invalid value!");
 
-            Console.Write("byte: ");
-            byte b = Convert.ToByte(Console.ReadLine());
-            Console.Write("sbyte: ");
-            sbyte c = Convert.ToSByte(Console.ReadLine());
-            Console.Write("char: ");
-            char d = Console.ReadLine()[0];
-            Console.Write("decimal: ");
-            decimal e = Convert.ToDecimal(Console.ReadLine());
-            Console.Write("double: ");
-            double f = Convert.ToDouble(Console.ReadLine());
-            Console.Write("float: ");
-            float g = (float)Convert.ToSingle(Console.ReadLine());
-            Console.Write("int: ");
-            int h = Convert.ToInt32(Console.ReadLine()); ;
-            Console.Write("uint: ");
-            uint i = Convert.ToUInt32(Console.ReadLine());
-            Console.Write("long: ");
-            long j = (long)Convert.ToInt32(Console.ReadLine());
-            Console.Write("ulong: ");
-            ulong k = (ulong)Convert.ToInt32(Console.ReadLine());
-            Console.Write("short: ");
-            short l = (short)Convert.ToInt32(Console.ReadLine());
-            Console.Write("ushort: ");
-            ushort m = (ushort)Convert.ToInt32(Console.ReadLine());
+                        Console.Write("byte: ");
+                        byte b = Convert.ToByte(Console.ReadLine());
+                        Console.Write("sbyte: ");
+                        sbyte c = Convert.ToSByte(Console.ReadLine());
+                        Console.Write("char: ");
+                        char d = Console.ReadLine()[0];
+                        Console.Write("decimal: ");
+                        decimal e = Convert.ToDecimal(Console.ReadLine());
+                        Console.Write("double: ");
+                        double f = Convert.ToDouble(Console.ReadLine());
+                        Console.Write("float: ");
+                        float g = (float)Convert.ToSingle(Console.ReadLine());
+                        Console.Write("int: ");
+                        int h = Convert.ToInt32(Console.ReadLine()); ;
+                        Console.Write("uint: ");
+                        uint i = Convert.ToUInt32(Console.ReadLine());
+                        Console.Write("long: ");
+                        long j = (long)Convert.ToInt32(Console.ReadLine());
+                        Console.Write("ulong: ");
+                        ulong k = (ulong)Convert.ToInt32(Console.ReadLine());
+                        Console.Write("short: ");
+                        short l = (short)Convert.ToInt32(Console.ReadLine());
+                        Console.Write("ushort: ");
+                        ushort m = (ushort)Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine($"\nbool -\t{a}");
-            Console.WriteLine($"byte -\t{b}");
-            Console.WriteLine($"sbyte -\t{c}");
-            Console.WriteLine($"char -\t{d}");
-            Console.WriteLine($"decimal -\t{e}");
-            Console.WriteLine($"double -\t{f}");
-            Console.WriteLine($"float -\t{g}");
-            Console.WriteLine($"int -\t{h}");
-            Console.WriteLine($"uint -\t{i}");
-            Console.WriteLine($"long -\t{j}");
-            Console.WriteLine($"ulong -\t{k}");
-            Console.WriteLine($"short -\t{l}");
-            Console.WriteLine($"ushort -\t{m}");
+                        Console.WriteLine($"\nbool -\t{a}");
+                        Console.WriteLine($"byte -\t{b}");
+                        Console.WriteLine($"sbyte -\t{c}");
+                        Console.WriteLine($"char -\t{d}");
+                        Console.WriteLine($"decimal -\t{e}");
+                        Console.WriteLine($"double -\t{f}");
+                        Console.WriteLine($"float -\t{g}");
+                        Console.WriteLine($"int -\t{h}");
+                        Console.WriteLine($"uint -\t{i}");
+                        Console.WriteLine($"long -\t{j}");
+                        Console.WriteLine($"ulong -\t{k}");
+                        Console.WriteLine($"short -\t{l}");
+                        Console.WriteLine($"ushort -\t{m}");
 
-            //b)
+                        //b)
 
-            byte a1 = 1, b1 = 2;
-            double c1 = a1;
-            float d1 = b1;
-            long e1 = a1;
-            short f1 = b1;
-            int g1 = a1;
+                        byte a1 = 1, b1 = 2;
+                        double c1 = a1;
+                        float d1 = b1;
+                        long e1 = a1;
+                        short f1 = b1;
+                        int g1 = a1;
 
-            Console.WriteLine($"c1 = {c1}, d1 = {d1}, e1 = {e1}, f1 = {f1}, g1 = {g1}");
+                        Console.WriteLine($"c1 = {c1}, d1 = {d1}, e1 = {e1}, f1 = {f1}, g1 = {g1}");
 
-            //c)
+                        //c)
 
-            int a3 = 10;
-            object b3 = a3;
+                        int a3 = 10;
+                        object b3 = a3;
 
-            int c3 = (int)b3;
+                        int c3 = (int)b3;
 
-            //d)
+                        //d)
 
-            var a4 = 10;
-            var b4 = "text";
+                        var a4 = 10;
+                        var b4 = "text";
 
-            //e)
+                        //e)
 
-            int? a5 = null;
-            Console.WriteLine($"Nullable vadiable a = {a5}");
+                        int? a5 = null;
+                        Console.WriteLine($"Nullable vadiable a = {a5}");
 
-            //f)
+                        //f)
 
-            var a6 = 10;
-            a6 = 'a';
-            Console.WriteLine($"a6 = {a6}");
+                        var a6 = 10;
+                        a6 = 'a';
+                        Console.WriteLine($"a6 = {a6}");
 
             //2)
 
+                        //a)
+
+                        string a7 = "string", b7 = "string";
+                        int c7 = String.Compare(a7, b7);
+                        Console.WriteLine($"Compare result (0 - same, -1 - not): {c7}");
+
+                        //b)
+
+                        string a8, b8, c8; //СЦЕПЛЕНИЕ
+                        Console.WriteLine($"Enter a8: ");
+                        a8 = Console.ReadLine();
+                        Console.WriteLine($"Enter b8: ");
+                        b8 = Console.ReadLine();
+                        Console.WriteLine($"Enter c8: ");
+                        c8 = Console.ReadLine();
+                        Console.WriteLine($"a8 + b8 + c8 = {a8 + b8 + c8}");
+
+                        Console.Write("Enter a string: "); //КОПИРОВАНИЕ
+                        string e8 = Console.ReadLine();
+                        string f8 = String.Copy(e8);
+                        Console.WriteLine($"Copied string: {f8}");
+
+                        string g8 = "one two three"; //ВЫДЕЛЕНИЕ ПОДСТРОКИ
+                        string h8 = g8.Substring(5, 4);
+                        Console.WriteLine($"String: {g8}\nCopied substring: {h8}");
+
+                        Console.Write("Enter a string of some words: "); //РАЗДЕЛЕНИЕ НА СЛОВА          
+                        string d8 = Console.ReadLine();
+                        for (int i2 = 0; i2 < d8.Length; i++)
+                        {
+                            if (d8[i2] == ' ')
+                            {
+                                Console.WriteLine("");
+                                continue;
+                            }
+                            Console.Write($"{d8[i2]}");
+                        }
+                        Console.WriteLine("");
+
+                        g8 = g8.Insert(0, h8); //ВСТАВКА ПОДСТРОКИ В СТРОКУ
+                        Console.WriteLine($"String with added substring: {g8}");
+
+                        g8 = g8.Remove(0, h8.Length); //УДАЛЕНИЕ ПОДСТРОКИ
+                        Console.WriteLine($"Fixed string after removing a substring: {g8}");
+
+                        //с)
+
+                        string a9 = "", b9 = null, c9 = "string";
+                        Console.WriteLine($"{String.IsNullOrEmpty(a9)}\n{String.IsNullOrEmpty(b9)}\n{String.IsNullOrEmpty(c9)}\nLength of '' string: {a9.Length}\n'null' string: {b9}");
+
+                        //d)
+
+                        StringBuilder a10 = new StringBuilder("Hey, I am a string!", 50);
+                        Console.WriteLine($"String created with StringBuilder: {a10}");
+                        a10.Remove(0, 5);
+                        Console.WriteLine($"Without some elements: {a10}");
+                        a10.Insert(0, "Hello, ");
+                        Console.WriteLine($"With some elements in the tail: {a10}");
+                        Console.WriteLine($"With some elements in the head: {a10 + " Don't delete me!"}");
+            */
+            //3)
+
             //a)
 
-            string a7 = "string", b7 = "string";
-            int c7 = String.Compare(a7, b7);
-            Console.WriteLine($"Compare result (0 - same, -1 - not): {c7}");
-
-            //b)
-
-            string a8, b8, c8; //СЦЕПЛЕНИЕ
-            Console.WriteLine($"Enter a8: ");
-            a8 = Console.ReadLine();
-            Console.WriteLine($"Enter b8: ");
-            b8 = Console.ReadLine();
-            Console.WriteLine($"Enter c8: ");
-            c8 = Console.ReadLine();
-            Console.WriteLine($"a8 + b8 + c8 = {a8 + b8 + c8}");
-
-            Console.Write("Enter a string: "); //КОПИРОВАНИЕ
-            string e8 = Console.ReadLine();
-            string f8 = String.Copy(e8);
-            Console.WriteLine($"Copied string: {f8}");
-
-            string g8 = "one two three"; //ВЫДЕЛЕНИЕ ПОДСТРОКИ
-            string h8 = g8.Substring(5, 4);
-            Console.WriteLine($"String: {g8}\nCopied substring: {h8}");
-
-            Console.Write("Enter a string of some words: "); //РАЗДЕЛЕНИЕ НА СЛОВА          
-            string d8 = Console.ReadLine();
-            for (int i2 = 0; i2 < d8.Length; i++)
+            int[,] Array =
             {
-                if (d8[i2] == ' ')
+                {1,2},
+                {3,4}
+            };
+            for (int i11 =0; i11 < 2; i11++)
+            {
+                for (int j11 = 0; j11 < 2; j11++)
                 {
-                    Console.WriteLine("");
-                    continue;
+                    Console.Write($"{Array[i11, j11]} ");
                 }
-                Console.Write($"{d8[i2]}");
+                Console.WriteLine();
             }
-            Console.WriteLine("");
-
-            g8 = g8.Insert(0, h8); //ВСТАВКА ПОДСТРОКИ В СТРОКУ
-            Console.WriteLine($"String with added substring: {g8}");
-
-            g8 = g8.Remove(0, h8.Length); //УДАЛЕНИЕ ПОДСТРОКИ
-            Console.WriteLine($"Fixed string after removing a substring: {g8}");
-
-            //с)
-
-            string a9 = "", b9 = null, c9 = "string";
-            Console.WriteLine($"{String.IsNullOrEmpty(a9)}\n{String.IsNullOrEmpty(b9)}\n{String.IsNullOrEmpty(c9)}\nLength of '' string: {a9.Length}\n'null' string: {b9}");
-
-            //d)
-
-            StringBuilder a10 = new StringBuilder("Hey, I am a string!", 50);
-            Console.WriteLine($"String created with StringBuilder: {a10}");
-            a10.Remove(0, 5);
-            Console.WriteLine($"Without some elements: {a10}");
-            a10.Insert(0, "Hello, ");
-            Console.WriteLine($"With some elements in the tail: {a10}");
-            Console.WriteLine($"With some elements in the head: {a10 + " Don't delete me!"}");
         }
     }
 }
