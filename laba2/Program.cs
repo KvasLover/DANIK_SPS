@@ -8,7 +8,7 @@ namespace laba2
     {
         static void Main(string[] args)
         {
-            /*   //1) ТИПЫ
+               //1) ТИПЫ
 
                //a) ОПРЕДЕЛИТЬ, ВВЕСТИ, ВЫВЕСТИ
 
@@ -223,7 +223,7 @@ namespace laba2
                string[] Array2 = {"string1","string2","string3","string4"};            
                for (int i12 =0; i12 < 4; i12++)
                {   
-                   Console.Write($"{Array2[i]} ");
+                   Console.Write($"{Array2[i12]} ");
                }
                Console.WriteLine();
                Console.WriteLine($"Длина массива строк: {Array2.Length}");
@@ -333,9 +333,9 @@ namespace laba2
                 Array5[i1] = Convert.ToInt32(Console.ReadLine());
             }
             Console.WriteLine("Введите строку: ");
-            string a16 = Console.ReadLine();
+            string aa16 = Console.ReadLine();
 
-            var Weird16 = Func(Array5, a16, length16);
+            var Weird16 = Func(Array5, aa16, length16);
 
             static (int,int,char) Func(int[] A, string s16, int length16)
             {
@@ -355,7 +355,7 @@ namespace laba2
 
             Console.WriteLine($"Максимальный элемент массива: {Weird16.Item1}\nМинимальный элемент массива: {Weird16.Item2}\nПервый символ строки: {Weird16.Item3}");
 
-            Console.WriteLine();*/
+            Console.WriteLine();
 
             //6) checked/unchecked
 
